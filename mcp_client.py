@@ -65,7 +65,7 @@ class MCPClient:
         resource = result.contents[0]
 
         if isinstance(resource, types.TextResourceContents):
-            if resource.mimetype == "application/json":
+            if resource.mimeType == "application/json":
                 return json.loads(resource.text)
             return resource.text
 
